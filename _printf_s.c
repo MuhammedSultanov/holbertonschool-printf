@@ -1,0 +1,29 @@
+#include <unistd.h>
+#include <limits.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * _print_c - A function for printing strings
+ * @a: leng
+ * @b: string
+ * */
+int _print_s(unsigned int *a, char *b)
+{
+	int i = 0;
+	if (!b)
+	{
+		write(1, "(null)", 6);
+		*a += 6;
+	}
+	else
+	{
+		while (*(b + i) != '\0')
+		{
+			write(1, (b + i), 1);
+			i++;
+			(*a)++;
+		}
+	}
+	return *a;
+}
