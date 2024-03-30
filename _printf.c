@@ -1,11 +1,14 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 /**
  * _printf - this is mini version of ptintf(3) function
  * @format: a character string
  * Return: the number of characters printed
  */
+int _print_c(unsigned int *a, char b);
+int _print_s(unsigned int *a, char *b);
 int _printf(const char *format, ...)
 {
 	unsigned int i, k = 0;
