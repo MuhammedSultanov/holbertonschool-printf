@@ -4,13 +4,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _print_c - A function for printing strings
+ * _print_s - A function for printing strings
  * @a: leng
  * @b: string
- * */
+ * Return: printing strings
+ **/
 int _print_s(unsigned int *a, char *b)
 {
 	int i = 0;
+
 	if (!b)
 	{
 		write(1, "(null)", 6);
@@ -25,5 +27,5 @@ int _print_s(unsigned int *a, char *b)
 			(*a)++;
 		}
 	}
-	return *a;
+	return (*a);
 }
