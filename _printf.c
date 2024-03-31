@@ -25,7 +25,8 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
-		    k = (unsigned int)_print_d(&k, va_arg(ptr, int)), i++;
+			k = (unsigned int)_print_d(&k, va_arg(ptr, int));
+			i++;
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 			write(1, "%", 1), i++, k++;
