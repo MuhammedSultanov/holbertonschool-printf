@@ -17,8 +17,8 @@ int _print_d(unsigned int *a, int b)
 
 	if (b < 0)
 	{
-		write(1, &zero, 1);
-		a++;
+		write(1, "-", 1);
+		(*a)++;
 		n = -1 * b;
 	}
 	else
@@ -26,7 +26,7 @@ int _print_d(unsigned int *a, int b)
 	if (n == 0)
 	{
 		write(1, &zero, 1);
-		return (*a + 1);
+		return ((*a) + 1);
 	}
 	while (n > 0)
 	{
@@ -35,7 +35,7 @@ int _print_d(unsigned int *a, int b)
 		n = n / 10;
 		c++;
 	}
-	a = a + c;
+	(*a) += c;
 	c = c - 1;
 	while (c >= 0)
 	{
