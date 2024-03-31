@@ -14,13 +14,14 @@
 
 
 ### Description of what each file shows:
-
-main.h -----------------------> holds prototypes of functions spread across all files
-_printf.c --------------------> holds custom _printf function
-_printf_s.c ------------------> handles %s to print a string of characters
-_printf_c.c ------------------> handles %c to print a single character
-_print_d.c -------------------> handles %d to print a number
-man_3_printf -----------------> custom manpage for custom _printf function
+|Function|Description|
+|----|-------|
+|main.h|holds prototypes of functions spread across all files|
+|_printf.c|holds custom _printf function|
+|_printf_s.c|handles %s to print a string of|
+|_printf_c.c|handles %c to print a single character|
+|_print_d.c|handles %d to print a number|
+|man_3_printf|custom manpage for custom _printf function|
 
 
 ### Environment
@@ -34,25 +35,29 @@ man_3_printf -----------------> custom manpage for custom _printf function
 alex@ubuntu$ git clone https://github.com/MuhammedSultanov/holbertonschool-printf.git
 alex@ubuntu$ cd holbertonschool-printf
 
-Sample main program inside print.c:
+<hr>
+
+<h3>Sample main program inside print.c:</h3>
+
+```bash
 
 int main(void)
 {
 	_printf("%s %c %d", "Hello K_N!", "H", 100);
 	return (0);
 }
-====================================
-alex@ubuntu$ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c -o print
-alex@ubuntu$ ./print
-Hello K_N! H 100
-alex@ubuntu)$
+```
+<hr>
+alex@ubuntu$ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c -o printf
 
+alex@ubuntu$ ./printf
+
+Hello K_N! H 100
 
 ### To Do
 * The main _printf function can be separated into more modular shorter functions
 * More functionality can still be added (e.g. support field width specifiers, etc)
 
----
 ### Authors
 Muhammed Sultanov
 Sohrab Yusibov
