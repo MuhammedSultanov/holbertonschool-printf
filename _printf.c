@@ -23,6 +23,10 @@ int _printf(const char *format, ...)
 			k = (unsigned int)_print_s(&k, va_arg(ptr, char *));
 			i++;
 		}
+		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
+		{
+		    k = (unsigned int)_print_d(&k, va_arg(ptr, int)), i++;
+		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 			write(1, "%", 1), i++, k++;
 		else if (format[i] == '%' && format[i + 1] == '\0')
